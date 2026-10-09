@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b18">
+<title>X3 Cloud Gaming</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080b18;
+  color: white;
+  min-height: 100vh;
+}
+
+header {
+  padding: 22px;
+  text-align: center;
+  background: #11172b;
+  border-bottom: 1px solid #293458;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #55e7ff;
+}
+
+.subtitle {
+  color: #9ba9ca;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+main {
+  max-width: 500px;
+  margin: auto;
+  padding: 22px;
+}
+
+.card {
+  background: #11172b;
+  border: 1px solid #293458;
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.game {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.description {
+  color: #aab5d1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.status {
+  padding: 13px;
+  background: #0a1021;
+  border-radius: 10px;
+  color: #ffca70;
+  font-size: 14px;
+  margin: 16px 0;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 11px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.primary {
+  background: linear-gradient(90deg, #28c8ff, #786bff);
+  color: white;
+}
+
+.secondary {
+  background: #222c49;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #7583a6;
+  font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">X3 CLOUD GAMING</div>
+  <div class="subtitle">YOUR GAME. YOUR CLOUD. YOUR WORLD.</div>
+</header>
+
+<main>
+  <section class="card">
+    <h2>🎮 Game Library</h2>
+    <div class="game">Mobile Legends: Bang Bang</div>
+    <p class="description">
+      Mainkan melalui sistem streaming dari perangkat host
+      yang menjalankan game.
+    </p>
+    <div class="status" id="status">
+      ● Belum terhubung ke perangkat host
+    </div>
+    <button class="primary" onclick="connectHost()">
+      CONNECT TO HOST
+    </button>
+    <button class="secondary" onclick="showInfo()">
+      CARA MENGGUNAKAN
+    </button>
+  </section>
+
+  <section class="card">
+    <h2>📡 Connection</h2>
+    <p class="description">
+      Perangkat client: Realme C30<br>
+      Perangkat host: Samsung Galaxy Tab A7 Lite
+    </p>
+    <div class="status" id="connection">
+      Streaming belum aktif
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>⚡ Project Status</h2>
+    <p class="description">
+      Website interface: Ready<br>
+      Video streaming: Belum tersedia<br>
+      Remote touch: Belum tersedia
+    </p>
+  </section>
+</main>
+
+<footer>
+  X3 Cloud Gaming · Experimental Project
+</footer>
+
+<script>
+function connectHost() {
+  document.getElementById("status").textContent =
+    "● Host belum ditemukan. Sistem streaming belum dipasang.";
+
+  document.getElementById("connection").textContent =
+    "Belum ada koneksi streaming aktif.";
+}
+
+function showInfo() {
+  alert(
+    "X3 Cloud Gaming\n\n" +
+    "1. Buka website ini pada Realme C30.\n" +
+    "2. Siapkan aplikasi host pada Samsung Tab A7 Lite.\n" +
+    "3. Hubungkan keduanya melalui sistem streaming.\n\n" +
+    "Catatan: Aplikasi host dan streaming sungguhan " +
+    "belum dibuat pada versi ini."
+  );
+}
+</script>
+
+</body>
+  </html>
